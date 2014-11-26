@@ -1,4 +1,4 @@
-define(function () {
+﻿define(function () {
     var plugin = {
         settings: {
             name: "upload",
@@ -47,14 +47,10 @@ define(function () {
             var width  =  $(document).innerWidth()  - 200;
             var height =  $(document).innerHeight() - 200;
 
-            // iPad popOver, see https://tracker.moodle.org/browse/MOBILE-208
-            var popover = new CameraPopoverOptions(10, 10, width, height, Camera.PopoverArrowDirection.ARROW_ANY);
-
             navigator.camera.getPicture(MM.plugins.upload.photoSuccess, MM.plugins.upload.photoFails, {
                 quality: 50,
                 destinationType: navigator.camera.DestinationType.FILE_URI,
-                sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY,
-                popoverOptions : popover
+                sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
             });
         },
 
@@ -62,7 +58,7 @@ define(function () {
             MM.log('Trying to get a image from camera', 'Upload');
             MM.Router.navigate("");
 
-            navigator.camera.getPicture(MM.plugins.upload.photoSuccess, MM.plugins.upload.photoFails, {
+            navigator.camera.getPicture(MM.plugins.upload.photoCameraSuccess, MM.plugins.upload.photoFails, {
                 quality: 50,
                 destinationType: navigator.camera.DestinationType.FILE_URI
             });
@@ -71,7 +67,7 @@ define(function () {
         recordAudio: function() {
             MM.Router.navigate("");
             MM.log('Trying to record and Audio', 'Upload');
-            navigator.device.capture.captureAudio(MM.plugins.upload.recordAudioSuccess, MM.plugins.upload.recordAudioFails, {limit: 1});
+            captureAudioW8(MM.plugins.upload.recordAudioSuccess, MM.plugins.upload.recordAudioFails, { limit: 1 });
         },
 
         uploadVideo: function() {
@@ -81,6 +77,32 @@ define(function () {
                 MM.plugins.upload.uploadVideoSuccess,
                 MM.plugins.upload.uploadVideoFails,
                 {limit: 1});
+        },
+
+        photoCameraSuccess: function (uri) { // windows8 special case
+            MM.log('Uploading an image to Moodle', 'Upload');
+            var d = new Date();
+
+            var options = {};
+            options.fileKey = "file";
+
+            // Check if we are in desktop or mobile.
+
+            if (MM.inNodeWK) {
+                options.fileName = uri.lastIndexOf("/") + 1;
+            } else {
+                options.fileName = "image_" + d.getTime() + ".jpg";
+            }
+
+            options.mimeType = "image/jpeg";
+
+
+            uri = Windows.Storage.ApplicationData.current.localFolder.path + '\\' + uri.substr(uri.lastIndexOf('/') + 1);
+
+            MM.moodleUploadFile(uri, options,
+                                function () { MM.popMessage(MM.lang.s("imagestored")); },
+                                function () { MM.popErrorMessage(MM.lang.s("erroruploading")) }
+            );
         },
 
         photoSuccess: function(uri) {
@@ -121,22 +143,25 @@ define(function () {
 
             MM.log('Auddio sucesfully recorded', 'Upload');
 
-            var i, len;
-            for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-                var options = {};
-                options.fileKey = null;
-                options.fileName = mediaFiles[i].name;
-                options.mimeType = null;
+            var audioPath = Windows.Storage.ApplicationData.current.localFolder.path;
+            audioPath = audioPath.split('AppData');
+            audioPath = audioPath[0] + '\Music\\captureAudio.mp3';
 
-                MM.moodleUploadFile(mediaFiles[i].fullPath, options,
-                                    function(){
-                                        MM.popMessage(MM.lang.s("recordstored"));
-                                    },
-                                    function(){
-                                        MM.popErrorMessage(MM.lang.s("erroruploading"))
-                                    }
-                );
-            }
+            var options = {};
+            options.fileKey = null;
+            options.fileName = mediaFiles.src;
+            options.mimeType = null;
+
+            //pathMediaFiles = Windows.Storage.KnownFolders.musicLibrary.path + '\\' + mediaFiles.src;
+            //console.log(audioPath);
+            MM.moodleUploadFile(audioPath, options,
+                                function () {
+                                    MM.popMessage(MM.lang.s("recordstored"));
+                                },
+                                function () {
+                                    MM.popErrorMessage(MM.lang.s("erroruploading"));
+                                }
+            );
         },
 
         recordAudioFails: function(error) {
@@ -166,7 +191,7 @@ define(function () {
                 options.fileName = mediaFiles[i].name;
                 options.mimeType = null;
 
-                MM.moodleUploadFile(mediaFiles[i].fullPath, options,
+                MM.moodleUploadFile(mediaFiles[i].localURL, options,
                                     function(){
                                         MM.popMessage(MM.lang.s("videostored"));
                                     },
