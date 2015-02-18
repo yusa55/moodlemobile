@@ -2,21 +2,21 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
-        versionCode = "385"
-        version   = "1.11">
-    <name>Moodle Mobile</name>
+        id        = "tz.ac.suza.lmsmobile"
+        versionCode = "1"
+        version   = "1.0">
+    <name>SUZA MOODLE</name>
 
     <description>
-        Moodle Mobile official app
+        Suza LMS Moodle app
     </description>
 
-    <author href="http://moodle.com" email="juan@moodle.com">
-        Juan Leyva
+    <author href="http://suza.ac.tz" email="yusahaha@gmail.com">
+        SUZA Yussuf
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-        <string>1.11</string>
+        <string>1.0</string>
     </gap:config-file>
 
     <feature name="http://api.phonegap.com/1.0/device" />
