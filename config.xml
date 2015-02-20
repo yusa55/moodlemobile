@@ -101,7 +101,7 @@
     <gap:plugin name="net.tunts.webintent" />
     <gap:plugin name="nl.x-services.plugins.launchmyapp">
 <<<<<<< HEAD
-        <param name="URL_SCHEME" value="lmsmobile" />
+        <param name="URL_SCHEME" value="suzamoodle" />
 =======
         <param name="URL_SCHEME" value="moodle" />
 >>>>>>> origin/yusaSuza
