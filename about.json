@@ -1,24 +1,29 @@
 {
+<<<<<<< HEAD
 "name": "Suza Moodle",
+=======
+"name": "SUZA MOODLE",
+>>>>>>> origin/yusaSuza
 "license": {
     "name": "Apache 2.0",
     "link": "http://www.apache.org/licenses/LICENSE-2.0"
 },
 "credits": [
-{
+    {
     "fullname": "Yussuf Yussuf",
-    "contribution": "Main Customizer",
-    "company": "SUZA"
+    "contribution": "Customization for Suza",
+    "company": "Student The State University Of Zanzibar"
 },
+
 {
     "fullname": "Daudi Mrutu",
-    "contribution": "Assistant Customizer",
-    "company": "SUZA"
+    "contribution": "Customization for Suza",
+    "company": "Student The State University Of Zanzibar"
 },
 {
     "fullname": "Zainab Abdulrahman",
-    "contribution": "Assistant Customizer",
-    "company": "SUZA"
+    "contribution": "Customization for Suza",
+    "company": "Student The State University Of Zanzibar"
 },
 {
     "fullname": "Juan Leyva",

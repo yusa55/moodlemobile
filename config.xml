@@ -100,7 +100,11 @@
     <gap:plugin name="com.phonegap.plugins.pushplugin" />
     <gap:plugin name="net.tunts.webintent" />
     <gap:plugin name="nl.x-services.plugins.launchmyapp">
+<<<<<<< HEAD
         <param name="URL_SCHEME" value="lmsmobile" />
+=======
+        <param name="URL_SCHEME" value="moodle" />
+>>>>>>> origin/yusaSuza
     </gap:plugin>
     <gap:plugin name="com.ionic.keyboard" version="1.0.3" />
     <gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.7.5" />
