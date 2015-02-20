@@ -1,10 +1,25 @@
 {
-"name": "Moodle Mobile",
+"name": "Suza Moodle",
 "license": {
     "name": "Apache 2.0",
     "link": "http://www.apache.org/licenses/LICENSE-2.0"
 },
 "credits": [
+{
+    "fullname": "Yussuf Yussuf",
+    "contribution": "Main Customizer",
+    "company": "SUZA"
+},
+{
+    "fullname": "Daudi Mrutu",
+    "contribution": "Assistant Customizer",
+    "company": "SUZA"
+},
+{
+    "fullname": "Zainab Abdulrahman",
+    "contribution": "Assistant Customizer",
+    "company": "SUZA"
+},
 {
     "fullname": "Juan Leyva",
     "contribution": "Main developer",
