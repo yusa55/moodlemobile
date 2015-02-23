@@ -1,10 +1,10 @@
 var templates = [
     "root/externallib/text!root/plugins/suzamoodle/theme.css",
     "root/externallib/text!root/plugins/suzamoodle/login.html",
-    "root/externallib/text!root/plugins/suzamoodle/program.html"
+    
 ];
 
-define(templates, function (theme, loginForm, program) {
+define(templates, function (theme, loginForm) {
     var plugin = {
         settings: {
             name: "suzamoodle",
