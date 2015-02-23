@@ -4,7 +4,7 @@
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "tz.ac.suza.lmsmobile"
         versionCode = "1"
-        version   = "1.1">
+        version   = "1.2">
     <name>SUZA MOODLE</name>
 
     <description>
