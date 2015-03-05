@@ -5,7 +5,7 @@ var templates = [
     
 ];
 
-define(templates, function (theme, loginForm) {
+define(templates, function (theme, loginForm,swlang) {
     var plugin = {
         settings: {
             name: "suzamoodle",
