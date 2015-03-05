@@ -18,14 +18,14 @@ define(templates, function (theme, loginForm,swlang) {
         },
 
         routes: [
-            ["suzamoodle", "show_program", "showProgram"]
+            ["suzamoodle", "show_program"]
         ],
 
-        showProgram: function() {
+     /*   showProgram: function() {
             var tpl = {};
             var html = MM.tpl.render(program, tpl);
             MM.panels.show('center', html, {title: MM.lang.s("suzamoodle")});
-        }
+        } */
     };
 
     // Inject allways our custom theme.
