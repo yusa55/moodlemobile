@@ -17,11 +17,11 @@ define(templates, function (theme, loginForm) {
             }
         },
 
-        routes: [
+       /*  routes: [
             ["suzamoodle", "show_program"]
         ],
 
-     /*   showProgram: function() {
+       showProgram: function() {
             var tpl = {};
             var html = MM.tpl.render(program, tpl);
             MM.panels.show('center', html, {title: MM.lang.s("suzamoodle")});
