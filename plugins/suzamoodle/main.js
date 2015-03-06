@@ -9,7 +9,7 @@ define(templates, function (theme, loginForm) {
     var plugin = {
         settings: {
             name: "suzamoodle",
-            type: "general",
+            type: "mod",
             menuURL: "#suzamoodle",
             icon: "plugins/events/icon.png",
             lang: {
