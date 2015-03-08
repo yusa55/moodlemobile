@@ -5,7 +5,7 @@
 "cache_expiration_time" : 300000,
 "default_lang" : "en",
 "languages": {"ar": "عربي", "de": "Deutsch", "en": "English", "sw": "Swahili", "es": "Español", "es_mx": "Español - México", "fa": "فارسی", "fr" : "Français", "pt_br": "Português - Brasil"},
-"plugins" : ["notifications", "messages", "upload", "events", "myfiles", "contents", "participants", "grades","addcontact", "addnote", "sendmessage", "forum", "label", "url", "page", "resource","suzamoodle"],
+"plugins" : ["notifications", "messages", "upload", "events", "myfiles", "contents", "participants", "grades","addcontact", "addnote", "sendmessage", "forum", "label", "url", "page", "resource","suzamoodle","swahililanguage"],
 "wsservice" : "moodle_mobile_app",
 "wsextservice" : "local_mobile",
 "presets" : {"url": "http://41.73.201.102/moodle/", "username": ""},
