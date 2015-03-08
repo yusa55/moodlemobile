@@ -4,7 +4,7 @@ var templates = [
 
 define(templates, function (swlang) {
     var plugin = {
-        settings: {
+     /*   settings: {
             name: "swahililanguage",
             type: "settings",
             menuURL: "#swahililanguage",
@@ -12,10 +12,10 @@ define(templates, function (swlang) {
             lang: {
                 component: "core"
             }
-        },
+        },*/
 
-	MM.loadLang('core', 'sw', JSON.parse('swlang.json'));
+	MM.loadLang('core', 'sw', JSON.parse(swlang.json));
 	
-    //MM.registerPlugin(plugin);
+    MM.registerPlugin(plugin);
 
 });
