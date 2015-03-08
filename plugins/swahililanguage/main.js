@@ -1,5 +1,5 @@
 var templates = [
-    "root/externallib/text!root/plugins/swahililanguage/swlang.json",   
+    "root/externallib/text!root/plugins/swahililanguage/swlang.json"   
 ];
 
 define(templates, function (swlang) {
@@ -14,8 +14,8 @@ define(templates, function (swlang) {
             }
         },
 
-	MM.loadLang('core', 'sw', JSON.parse(swlang.json));
+	MM.loadLang('core', 'sw', JSON.parse('swlang.json'));
 	
-    MM.registerPlugin(plugin);
+    //MM.registerPlugin(plugin);
 
 });
