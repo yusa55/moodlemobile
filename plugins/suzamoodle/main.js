@@ -3,7 +3,7 @@ var templates = [
     "root/externallib/text!root/plugins/suzamoodle/login.html",
 	"root/externallib/text!root/plugins/suzamoodle/swlang.json"];
 
-define(templates, function (theme, loginForm) {
+define(templates, function (theme, loginForm, swlang) {
     var plugin = {
         settings: {
             name: "suzamoodle",
