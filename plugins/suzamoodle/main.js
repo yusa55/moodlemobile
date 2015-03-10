@@ -1,9 +1,7 @@
 var templates = [
     "root/externallib/text!root/plugins/suzamoodle/theme.css",
     "root/externallib/text!root/plugins/suzamoodle/login.html",
-	
-    
-];
+	"root/externallib/text!root/plugins/suzamoodle/swlang.json"];
 
 define(templates, function (theme, loginForm) {
     var plugin = {
@@ -13,7 +11,7 @@ define(templates, function (theme, loginForm) {
             menuURL: "#suzamoodle",
             icon: "plugins/events/icon.png",
             lang: {
-                component: "core"
+                component: "suzamoodle"
             }
         },
 
@@ -49,7 +47,7 @@ define(templates, function (theme, loginForm) {
         MM._displayAddSite();
     };
 
-	//MM.loadLang('core', 'sw', JSON.parse(swlang.json));
+	MM.loadLang('suzamoodle', 'sw', JSON.parse(swlang.json));
 	
     MM.registerPlugin(plugin);
 
