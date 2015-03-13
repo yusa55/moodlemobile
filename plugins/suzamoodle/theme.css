@@ -1,5 +1,5 @@
 body {
- background: #1E90FF;
+ background: #FFFFE0;
 }
 h1 {
  color: #8B0000;
@@ -23,7 +23,7 @@ h2 {
 }
 .user-menu h2 {
  color: #4b565d;
- background: #ffffff;
+ background: #FFE4B5;
  box-shadow: none;
 }
 .user-menu .nav-item > a {
@@ -39,6 +39,6 @@ h2 {
 }
 
 .user-menu header {
- color: #fa8f1c;
- background: #00FF00 ;
+ color: #4B0082;
+ background: #00FF00;
 }
