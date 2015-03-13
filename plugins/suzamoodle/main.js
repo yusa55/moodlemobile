@@ -1,13 +1,8 @@
 var templates = [
     "root/externallib/text!root/plugins/suzamoodle/theme.css",
     "root/externallib/text!root/plugins/suzamoodle/login.html"
-<<<<<<< HEAD
-	
-    
-];
-=======
 	];
->>>>>>> origin/yusaSuza
+
 
 define(templates, function (theme, loginForm) {
     var plugin = {
