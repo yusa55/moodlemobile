@@ -1,6 +1,6 @@
 var templates = [
     "root/externallib/text!root/plugins/suzamoodle/theme.css",
-    "root/externallib/text!root/plugins/suzamoodle/login.html",
+    "root/externallib/text!root/plugins/suzamoodle/login.html"
 	
     
 ];
