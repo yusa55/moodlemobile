@@ -12,7 +12,7 @@ define(templates, function (theme, loginForm) {
             menuURL: "#suzamoodle",
             icon: "plugins/events/icon.png",
             lang: {
-                component: "suzamoodle"
+                component: "core"
             }
         },
 
