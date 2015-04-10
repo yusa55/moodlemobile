@@ -4,7 +4,7 @@
 "versionname" : "1.2",
 "cache_expiration_time" : 300000,
 "default_lang" : "en",
-"languages": {"ar": "عربي", "de": "Deutsch", "en": "English", "sw": "Swahili", "it": "Italiano", "es": "Español", "es_mx": "Español - México", "fa": "فارسی", "fr" : "Français", "pt_br": "Português - Brasil"},
+"languages": {"ar": "عربي", "de": "Deutsch", "en": "English", "it": "Italiano", "es": "Español", "es_mx": "Español - México", "fa": "فارسی", "fr" : "Français", "pt_br": "Português - Brasil"},
 "plugins" : ["notifications", "messages", "upload", "events", "myfiles", "contents", "participants", "grades","addcontact", "addnote", "sendmessage", "forum", "label", "url", "page", "resource","suzamoodle"],
 "wsservice" : "moodle_mobile_app",
 "wsextservice" : "local_mobile",
